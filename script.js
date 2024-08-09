@@ -1,6 +1,7 @@
 document.getElementById("startButton").addEventListener("click", startGame);
-document.getElementById("resetButton").addEventListener("click", () => window.location.reload()); // to reset the game and timeouts
-
+document
+  .getElementById("resetButton")
+  .addEventListener("click", () => window.location.reload()); // to reset the game and timeouts
 
 let gameMode;
 let numLength;
@@ -82,7 +83,7 @@ function displayNumbers() {
       index++;
       setTimeout(hideNumber, 1000);
     } else {
-      cards.map((card)=> card.classList.remove("flip"));
+      cards.map((card) => card.classList.remove("flip"));
       setTimeout(startMemoryPhase, 3000);
     }
   }
@@ -98,6 +99,7 @@ function displayNumbers() {
   let index = 0;
 
   if (gameMode === "chaotic") {
+    // random order
     cards.sort(() => 0.5 - Math.random());
   }
 
@@ -115,7 +117,7 @@ function startMemoryPhase() {
     cardBack.contentEditable = true;
     cardBack.addEventListener("input", evaluateInput);
   });
-  preventKeyPressbyClassname("card-back", numDigits);
+  limitInputLengthByClassName("card-back", numDigits);
   focusNextElement(-1); // focuses the first card
   timer = new Date();
 }
@@ -144,6 +146,7 @@ function evaluateInput(event) {
 
     cardBack.classList.remove("correct", "empty");
 
+    // clear the input after a short delay that could cause latency for the user to see the feedback
     setTimeout(() => {
       cardBack.textContent = "";
     }, 200);
@@ -218,7 +221,7 @@ function limitInputLengthByClassName(className, length) {
  * Ensures that the value of an input element stays within its defined minimum and maximum limits.
  * If the value is less than the minimum, it sets the value to the minimum.
  * If the value is greater than the maximum, it sets the value to the maximum.
- * 
+ *
  * @param {HTMLElement} el - The input element to impose the min and max constraints on.
  */
 function imposeMinMax(el) {
@@ -231,4 +234,3 @@ function imposeMinMax(el) {
     }
   }
 }
-
