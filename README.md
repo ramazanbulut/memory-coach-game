@@ -79,15 +79,13 @@ Memory Coach/
 │
 ├── index.html         # Main HTML file
 ├── styles.css         # CSS file for styling
-├── script.js          # JavaScript file for game logic
-└── sounds/            # Folder containing sound files
+└── script.js          # JavaScript file for game logic
 ```
 
 ## Customization
 
 - **Styling**: Modify `styles.css` to change the visual appearance of the game.
 - **Game Logic**: Edit `script.js` to add new features, modify game mechanics, or change the behavior of existing features.
-- **Sounds**: Replace the sound files in the `sounds/` directory to customize the audio feedback.
 
 ## Future Improvements
 
