@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Memory Coach</h1>
+  <div class="settings">
+    <label for="numLength">Number of Cards: </label>
+    <input type="number" id="numLength" value="1" min="1" max="20" onkeyup=imposeMinMax(this) />
+  </div>
+  <div class="settings">
+    <label for="numDigits">Number of Digits: </label>
+    <input type="number" id="numDigits" value="1" min="1" max="6" onkeyup=imposeMinMax(this) />
+  </div>
+  <div class="settings">
+    <label for="gameMode">Game Mode: </label>
+    <select id="gameMode">
+      <option value="easy">Easy</option>
+      <option value="pro">Pro</option>
+      <option value="chaotic">Chaotic</option>
+    </select>
+  </div>
+  <button id="startButton">Start</button>
+  <button id="resetButton" class="hidden">Reset</button>
+
+  <div id="gameArea"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

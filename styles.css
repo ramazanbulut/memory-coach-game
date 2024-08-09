@@ -1,0 +1,150 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #f0f8ff;
+	color: #333;
+      }
+      
+      h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+      }
+      
+      .settings {
+	margin: 10px;
+      }
+
+      
+      
+      .card {
+	perspective: 1000px;
+	display: inline-block;
+	margin: 20px 10px;
+	transform-style: preserve-3d;
+	transition: transform 0.6s;
+      }
+      
+      .card-inner {
+	position: relative;
+	width: 100px;
+	height: 150px;
+	transform-style: preserve-3d;
+	transition: transform 0.6s;
+      }
+      
+      .card-front,
+      .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+	box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+      }
+      
+      .card-front {
+	background-color: #007bff;
+	color: white;
+      }
+      
+      .card-back {
+	background-color: #fff;
+	color: black;
+	transform: rotateY(180deg);
+	overflow: hidden;
+      }
+      
+      .flip {
+	transform: rotateY(180deg);
+      }
+      
+      .correct {
+	background-color: #4caf50;
+	color: white;
+      }
+      
+      .incorrect {
+	background-color: #f44336;
+      }
+      
+      .empty {
+	background-color: #fff;
+      }
+      
+      button {
+	padding: 15px 20px;
+	font-size: 1.2em;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+      }
+      
+      button:hover {
+	background-color: #0056b3;
+	transform: scale(1.05);
+      }
+      
+      .hidden {
+	display: none;
+      }
+      
+      @keyframes shake {
+	0% {
+	  transform: translateX(0);
+	}
+	25% {
+	  transform: translateX(-10px);
+	}
+	50% {
+	  transform: translateX(10px);
+	}
+	75% {
+	  transform: translateX(-10px);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+      }
+      
+      .shake {
+	animation: shake 0.5s;
+      }
+      
+      #gameMode {
+	padding: 10px;
+	font-size: 1em;
+	border: 2px solid #007bff;
+	border-radius: 5px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      
+      #gameMode:focus {
+	outline: none;
+	border-color: #0056b3;
+	box-shadow: 0 0 10px rgba(0, 91, 179, 0.5);
+      }
+      
+      #numLength, #numDigits {
+	width: 80px;
+	padding: 10px;
+	font-size: 1em;
+	border: 2px solid #007bff;
+	border-radius: 5px;
+	text-align: center;
+	transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      
+      #numLength:focus, #numDigits:focus {
+	outline: none;
+	border-color: #0056b3;
+	box-shadow: 0 0 10px rgba(0, 91, 179, 0.5);
+      }
+      
