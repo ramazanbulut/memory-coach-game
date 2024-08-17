@@ -392,7 +392,7 @@ function displayWinMessage(timeDiff, score) {
   const winMessage = document.createElement("div");
   winMessage.textContent = `Congratulations! You completed the game in ${timeDiff.toFixed(
     2
-  )} seconds. Your score: ${score}.`;
+  )} seconds. Your score: ${score}s/d.`;
   winMessage.classList.add("win-message");
   gameArea.appendChild(winMessage);
 }
