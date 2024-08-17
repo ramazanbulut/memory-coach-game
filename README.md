@@ -89,7 +89,6 @@ Memory Coach/
 
 ## Future Improvements
 
-- **Leaderboard**: Implement a leaderboard to track high scores.
 - **Additional Game Modes**: Add more challenging game modes or customizable difficulty settings.
 - **Accessibility**: Enhance the game for better accessibility, including keyboard navigation and screen reader support.
 

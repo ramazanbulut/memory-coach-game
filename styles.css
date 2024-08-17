@@ -14,8 +14,6 @@ h1 {
   margin: 10px;
 }
 
-
-
 .card {
   perspective: 1000px;
   display: inline-block;
@@ -45,6 +43,7 @@ h1 {
   font-size: 24px;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+  text-align: justify;
 }
 
 .card-front {
@@ -94,6 +93,10 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.not-visible {
+  visibility: hidden;
 }
 
 @keyframes shake {
@@ -152,4 +155,141 @@ button:hover {
   outline: none;
   border-color: #0056b3;
   box-shadow: 0 0 10px rgba(0, 91, 179, 0.5);
+}
+
+.win-message {
+  font-size: 1.5em;
+  color: #4caf50;
+  margin-top: 20px;
+}
+
+.high-score-message {
+  font-size: 1.5em;
+  color: #ff5722;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#progressContainer {
+  width: 100%;
+  background-color: #ddd;
+  margin: 20px auto;
+  height: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  position: relative;
+  z-index: -2;
+  margin-top: 60px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  transition: width 0.05s;
+  position: absolute;
+  border-radius: 5px;
+}
+
+#highScoreBar {
+  height: 100%;
+  width: 0;
+  background-color: aqua;
+  transition: width 0.05s;
+  position: absolute;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.tooltip {
+  width: 100px;
+  position: absolute;
+  top: -50px;
+  /* Adjust as needed to position above the parent */
+  right: -60px;
+  /* Adjust as needed to position right */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Dark background */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  font-size: 0.7em;
+  z-index: 10;
+}
+
+
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  /* Position the arrow right below the tooltip */
+  right: 50px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+  /* Arrow pointing down */
+}
+
+.tooltip-hs {
+  width: 120px;
+  position: absolute;
+  top: -50px;
+  /* Adjust as needed to position above the parent */
+  right: -60px;
+  /* Adjust as needed to position right */
+  background-color: rgba(11, 138, 41);
+  /* Dark background */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  font-size: 0.7em;
+  z-index: 11;
+}
+
+.tooltip-hs::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  /* Position the arrow right below the tooltip */
+  right: 50px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(11, 138, 41) transparent transparent transparent;
+  /* Arrow pointing down */
+}
+
+.fail-message {
+  font-size: 1.5em;
+  color: #f44336;
+  margin-top: 20px;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
